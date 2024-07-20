@@ -6,7 +6,7 @@ ORDER BY Reputation DESC;
 
 ---Ejercicio 2
 
-SELECT TOP 200 Posts.Title, Users.DisplayName
+SELECT TOP Posts.Title, Users.DisplayName
 FROM Posts
 INNER JOIN Users ON Posts.OwnerUserId = Users.Id
 

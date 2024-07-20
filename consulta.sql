@@ -51,7 +51,6 @@ PRINT 'Se eliminaron ' + CAST(@NumComentariosEliminados AS VARCHAR) + ' comentar
 
 ---Ejercicio 7
 
-publicaciones, comentarios y medallas
 SELECT TOP 200 Users.DisplayName,
 COALESCE(P.Numero_de_Publicaciones, 0) AS Total_Posts, --si encuentra null convierte a 0
 COALESCE(C.Numero_de_Comentarios, 0) AS Total_Comments,

@@ -56,7 +56,7 @@ COALESCE(P.Numero_de_Publicaciones, 0) AS Total_Posts, --si encuentra null convi
 COALESCE(C.Numero_de_Comentarios, 0) AS Total_Comments,
 COALESCE(B.Numero_de_Medallas, 0) AS Total_Badges
 FROM Users
-LEFT JOIN (SELECT OwnerUserId, COUNT(*) AS Numero_de_Publicaciones FROM Posts GROUP BY OwnerUserId) --numero total de veces que encontro un posteo con el mismo id
+LEFT JOIN (SELECT OwnerUserId, COUNT(*) AS Numero_de_Publicaciones FROM Posts GROUP BY OwnerUserId) 
 P ON Users.Id = P.OwnerUserId
 LEFT JOIN (SELECT UserId, COUNT(*) AS Numero_de_Comentarios FROM Comments GROUP BY UserId) 
 C ON Id = C.UserId

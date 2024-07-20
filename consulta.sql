@@ -33,6 +33,7 @@ GROUP BY Comments.UserId
 HAVING COUNT (Comments.Id) > 100);
 
 ---Ejercicio 5  
+
 UPDATE Users SET Location = 'Desconocido'
 WHERE Location IS NULL OR Location = ' ';
 PRINT 'La actualización se realizó correctamente.';
